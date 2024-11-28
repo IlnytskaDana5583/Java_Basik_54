@@ -6,7 +6,6 @@ public class PersonProfi extends Person{
         int speed = 25;
         System.out.println("Человек-профи пробегает:" + speed + "км/ч");
         rest();
-
     }
 
     public void rest() {
