@@ -11,5 +11,6 @@ public class PersonProfi extends Person{
     public void rest() {
         int restT = 5;
         System.out.println("Время отдыха:" + restT + "минут");
+
     }
 }
