@@ -14,26 +14,28 @@ public class MainShape {
 
         System.out.println("\n================================\n");
 
-        Shape[] shapes = new Shape[] {rectangle, triangle, circle};
+
+        Shape[] shapes = new Shape[] {new Rectangle(),new Triangle(), new Circle()};
 
 
         for (int i = 0; i < shapes.length; i++) {
-            shapes[i].result();
-
-            System.out.println("" + shapes);
+            System.out.println("Schape" + i + ":" );
 
 
 
-
-
-            }
 
 
         }
 
 
+    }
+}
 
 
-        }
+
+
+
+
+
 
 

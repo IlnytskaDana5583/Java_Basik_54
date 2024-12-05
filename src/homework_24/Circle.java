@@ -18,5 +18,16 @@ public class Circle  extends Shape{
         System.out.println("Периметр круга:" + сalculaterR1);
 
     }
+
+
+    @Override
+    public void getArea() {
+
+    }
+
+    @Override
+    public void getPerimeter() {
+
+    }
 }
 

@@ -10,8 +10,14 @@ package homework_24;
 
 public abstract class Shape {
     public abstract void  result ();
+    public abstract  void  getArea();
+    public abstract void  getPerimeter();
+
 
 
     }
+
+
+
 
 

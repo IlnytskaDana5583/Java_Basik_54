@@ -7,12 +7,15 @@ public class Rectangle extends Shape {
 
     }
 
+
     @Override
     public void result() {
-        width = 5.0;
+        width  = 5.0;
         height = 3.0;
         double calculateR = width * height;
         double calculaterR1 = 2 *(width * height);
+
+
 
 
         System.out.println("площадь прямоугольника:" +calculateR);
@@ -23,7 +26,15 @@ public class Rectangle extends Shape {
 
     }
 
+    @Override
+    public void getArea() {
 
+    }
+
+    @Override
+    public void getPerimeter() {
+
+    }
 
     public double getWidth() {
         return width;

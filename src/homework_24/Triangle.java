@@ -19,6 +19,15 @@ public class Triangle extends Shape {
 
     }
 
+    @Override
+    public void getArea() {
+
+    }
+
+    @Override
+    public void getPerimeter() {
+
+    }
 
     public double getHeight() {
         return height;
