@@ -1,7 +1,6 @@
 
 package lesson_17;
 
-
 public class ArrayApp {
     public static void main(String[] args) {
 
