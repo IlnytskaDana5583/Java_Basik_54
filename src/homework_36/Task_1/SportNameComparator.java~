@@ -1,0 +1,10 @@
+package homework_36.Task_1;
+
+import java.util.Comparator;
+
+public class SportNameComparator implements Comparator<Sportsman> {
+    @Override
+    public int compare(Sportsman man1, Sportsman man2) {
+        return man1.getName().compareTo(man2.getName());
+    }
+}

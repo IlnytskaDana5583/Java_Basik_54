@@ -99,8 +99,10 @@ public class Person {
 
     public  boolean isPasswordValid(String password) {
         if (password == null || password.length() < 8) {
+
             return false;
         }
+
         String specChars = "!%$@&*()[]";
 
 
@@ -140,6 +142,7 @@ public class Person {
         if (isPasswordValid(password))
 
         this.password = password;
+
     }
 
     @Override

@@ -57,12 +57,15 @@ public class BeautyController {
 
     private void addBeautysalon(Scanner scanner) {
 
-        System.out.println("Enter the servicename");
+        System.out.println("Enter the servicename:");
         String servicename = scanner.nextLine();
+        scanner.nextLine();
         System.out.println("Enter price servicname");
         double price = scanner.nextInt();
+        scanner.nextLine();
         System.out.println("Enter duration service");
         int duration = scanner.nextInt();
+        scanner.nextLine();
 
         Beautysalon beautysalon = new Beautysalon(servicename,125,90);
         beautyService.addServicename(beautysalon);

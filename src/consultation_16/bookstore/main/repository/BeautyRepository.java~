@@ -1,0 +1,4 @@
+package consultation_16.bookstore.main.repository;
+
+public class BeautyRepository {
+}

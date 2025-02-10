@@ -6,6 +6,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
+import org.junit.jupiter.params.provider.ValueSource;
+
 
 import java.util.stream.Stream;
 
@@ -17,7 +19,7 @@ public class PersonTest {
 
     Person person;
     String startEmail = "jon@test.com";
-    String startPassword = "querty1Q1";
+    String startPassword = "querty$1Q1";
 
     @BeforeEach
     void  setUp() {
@@ -41,7 +43,7 @@ public class PersonTest {
      */
     //не устанавливаются не инвалидные емейлы
 
-    //testmail.net
+    //testemail.net
     //test@@.net
     @ParameterizedTest
     @MethodSource("invalidEmailData")
@@ -59,13 +61,14 @@ public class PersonTest {
                 "fdg@hjjk,k."
         );
     }
-    @Test
-    void testValidPasswordSet() {
-        String validPassword = "validPass1$";
+    @ParameterizedTest
+    @ValueSource(strings = {"qwerty1Q&","1FDGADFFa$","sad %Der0W&"})
+    void testValidPasswordSet(String validPassword) {
 
         person.setPassword(validPassword);
+        assertNotNull(person.getPassword());
         assertEquals(validPassword,person.getPassword());
-        assertNotEquals(startPassword,person.getPassword());
+
     }
 
     @ParameterizedTest
@@ -74,15 +77,16 @@ public class PersonTest {
         person.setPassword(invalidPassword);
         assertNotEquals(invalidPassword,person.getPassword());
         assertEquals(startPassword,person.getPassword());
+
+
     }
-
-
 
     static Stream<String> invalidPasswordData() {
         return Stream.of(
-                "validPass1",
-                "valid",
-                "123"
+                "Pass1&",
+                "invali",
+                "inv123",
+                "Werty4"
         );
     }
 
