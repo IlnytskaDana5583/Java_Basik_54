@@ -24,12 +24,12 @@ public class ListExample {
         // Методы интерфейса List
 
         // boolean add(E e) - добавляет элемент в конец списка
-        list.add(1000);
-        list.add(-100);
+        list.add(Integer.valueOf(1000));
+        list.add(Integer.valueOf(-100));
         System.out.println("list: " + list);
 
         // void add(int index, E element) - добавляет элемент на указанную позицию
-        list.add(3, 500);
+        list.add(3, Integer.valueOf(500));
         System.out.println("list: " + list);
 
         // E get(int index) - возвращает элемент по индексу
